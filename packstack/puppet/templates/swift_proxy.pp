@@ -34,6 +34,7 @@ class { 'swift::proxy::ratelimit':
 }
 
 class { 'swift::proxy::keystone':
+	# include 'Member' as user into operator_roles 
     operator_roles => ['admin', 'SwiftOperator', 'Member'],
 }
 
